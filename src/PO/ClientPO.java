@@ -11,7 +11,8 @@ public class ClientPO implements Serializable{
 	String member_type;
 	String birthday;
 	String company;
-	String company2;
+
+	
 	
 	
 	public ClientPO(String n,long c,int c1,String cr,int m,String mt,String b,String co){
