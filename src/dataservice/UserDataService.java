@@ -3,7 +3,6 @@ package dataservice;
 import java.util.ArrayList;
 
 import PO.UserPO;
-import PO.WebManagerPO;
 import businesslogicsevice.ResultMessage;
 
 public interface UserDataService {

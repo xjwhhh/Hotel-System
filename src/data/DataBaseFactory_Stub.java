@@ -1,13 +1,8 @@
 package data;
 
-import PO.ClientPO;
-import PO.HotelPO;
 import PO.HotelStrategyPO;
-import PO.HotelWorkerPO;
 import PO.OrderPO;
 import PO.UserPO;
-import PO.WebManagerPO;
-import PO.WebMarketPO;
 import PO.WebStrategyPO;
 
 public class DataBaseFactory_Stub {
