@@ -8,7 +8,7 @@ import businesslogicsevice.OrderBLService;
 import businesslogicsevice.ResultMessage;
 
 public class OrderBLService_driver {
-	public void driver(OrderBLService orderBLService){
+	public void drive(OrderBLService orderBLService){
 		
 		//客户查看订单
 		ArrayList<OrderVO> OrderList_Client=new ArrayList<OrderVO>();
@@ -54,7 +54,7 @@ public class OrderBLService_driver {
 		}
 		
 		//客户生成订单
-		OrderVO order1=orderBLService.order_client_generate();
+		OrderVO order1=orderBLService.order_client_generate("input");
 		System.out.println(order1.getid());
 		System.out.println(order1.getstate());
 		System.out.println(order1.getexecute());

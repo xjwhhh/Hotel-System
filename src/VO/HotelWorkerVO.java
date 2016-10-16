@@ -4,10 +4,10 @@ package VO;
 
 public class HotelWorkerVO {
 	String name;
-	int contact;
+	String contact;
 	String hotel;
 	
-	public HotelWorkerVO(String n,int c,String h){
+	public HotelWorkerVO(String n,String c,String h){
 		name=n;
 		contact=c;
 		hotel=h;
@@ -15,7 +15,7 @@ public class HotelWorkerVO {
 	public String getname(){
 		return name;
 	}
-	public int getcontact(){
+	public String getcontact(){
 		return contact;
 	}
 	public String gethotel(){

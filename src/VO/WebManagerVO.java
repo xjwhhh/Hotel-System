@@ -4,16 +4,16 @@ package VO;
 
 public class WebManagerVO {
 	String name;
-	int contact;
+	String contact;
 	
-	public WebManagerVO(String n,int c){
+	public WebManagerVO(String n,String c){
 		name=n;
 		contact=c;
 	}
 	public String getname(){
 		return name;
 	}
-	public int getcontact(){
+	public String getcontact(){
 		return contact;
 	}
 }

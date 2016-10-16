@@ -25,7 +25,7 @@ public class ClientBLService_driver {
 			System.out.println(vo.getcompany());
 
 		//测试client_updateInfo
-		ResultMessage resultMessage = clientBLService.client_updateInfo();
+		ResultMessage resultMessage = clientBLService.client_updateInfo("input");
 		if(resultMessage==ResultMessage.Success){
 			System.out.println("更新客户信息成功");
 		}
@@ -60,7 +60,7 @@ public class ClientBLService_driver {
 		}
 
 		//测试client_searchHotel
-		list = clientBLService.client_searchHotel();
+		list = clientBLService.client_searchHotel("condition");
 		for(int i=0;i<list.size();i++){
 			vo2 = list.get(i);
 			System.out.println(vo2.getname());
@@ -78,7 +78,7 @@ public class ClientBLService_driver {
 		//。。。
 
 		//测试client_evaluateHotel
-		resultMessage = clientBLService.client_evaluateHotel();
+		resultMessage = clientBLService.client_evaluateHotel("evaluation");
 		if(resultMessage == ResultMessage.Success){
 			System.out.println("评价成功");
 		}
@@ -86,7 +86,7 @@ public class ClientBLService_driver {
 			System.out.println("评价失败");
 
 		//测试client_enrollVIP
-		resultMessage = clientBLService.client_enrollVIP();
+		resultMessage = clientBLService.client_enrollVIP("info");
 		if(resultMessage == ResultMessage.Success)
 			System.out.println("注册会员成功");
 		else

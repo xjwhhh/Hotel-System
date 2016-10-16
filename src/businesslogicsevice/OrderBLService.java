@@ -16,7 +16,7 @@ public interface OrderBLService {
 		public ResultMessage order_client_cancel();
 		
 		//客户生成订单
-		public OrderVO order_client_generate();
+		public OrderVO order_client_generate(String input);
 		
 		//酒店工作人员执行订单
 		public ResultMessage order_hotel_execute(ClientVO c);

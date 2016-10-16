@@ -58,8 +58,13 @@ public class ClientBLService_Stub implements ClientBLService{
 		return client;		
 	}
 	
-	public ResultMessage client_updateInfo(){
+	public ResultMessage client_updateInfo(String input){
+		if(input!=null){
 		return ResultMessage.Success;
+		}
+		else{
+			return ResultMessage.Fail;
+		}
 	}
 	
 	public ArrayList<HotelVO> client_getpreviousHotelList(){
@@ -71,7 +76,6 @@ public class ClientBLService_Stub implements ClientBLService{
 
 
 	public String client_checkCredit() {
-		
 		return credit_record;		
 	}
 
@@ -83,7 +87,7 @@ public class ClientBLService_Stub implements ClientBLService{
 	}
 
 
-	public ArrayList<HotelVO> client_searchHotel() {
+	public ArrayList<HotelVO> client_searchHotel(String condition) {
 		ArrayList<HotelVO> HotelList_Client=new ArrayList<HotelVO>();
 		HotelVO hotel=new HotelVO(address,business_address,hotel_name,introduction,service,room_state,room_type,room_number,room_price,order,evaluation);
 		HotelList_Client.add(hotel);
@@ -97,11 +101,21 @@ public class ClientBLService_Stub implements ClientBLService{
 	}
 
 
-	public ResultMessage client_evaluateHotel() {
-		return ResultMessage.Success;
+	public ResultMessage client_evaluateHotel(String evaluation) {
+		if(evaluation!=null){
+			return ResultMessage.Success;
+			}
+			else{
+				return ResultMessage.Fail;
+			}
 	}
 
-	public ResultMessage client_enrollVIP() {
-		return ResultMessage.Success;
+	public ResultMessage client_enrollVIP(String info) {
+		if(info!=null){
+			return ResultMessage.Success;
+			}
+			else{
+				return ResultMessage.Fail;
+			}
 	}
 }

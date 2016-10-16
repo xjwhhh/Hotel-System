@@ -4,16 +4,16 @@ import java.io.Serializable;
 
 public class WebMarketPO implements Serializable{
 	String name;
-	int contact;
+	String contact;
 	
-	public WebMarketPO(String n,int c){
+	public WebMarketPO(String n,String c){
 		name=n;
 		contact=c;
 	}
 	public String getname(){
 		return name;
 	}
-	public int getcontact(){
+	public String getcontact(){
 		return contact;
 	}
 }

@@ -59,7 +59,7 @@ public class OrderBLService_Stub implements OrderBLService{
 	}
 	
 	//客户生成订单
-	public OrderVO order_client_generate(){
+	public OrderVO order_client_generate(String input){
 		OrderVO neworder=new OrderVO(id,state,execute,hotel,start_time,end_time,latest_execute_time,room_type,room_number,strategy,price,expect_number_of_people);
 		return neworder;
 	}

@@ -4,10 +4,10 @@ import java.io.Serializable;
 
 public class HotelWorkerPO implements Serializable{
 	String name;
-	int contact;
+	String contact;
 	String hotel;
 	
-	public HotelWorkerPO(String n,int c,String h){
+	public HotelWorkerPO(String n,String c,String h){
 		name=n;
 		contact=c;
 		hotel=h;
@@ -15,7 +15,7 @@ public class HotelWorkerPO implements Serializable{
 	public String getname(){
 		return name;
 	}
-	public int getcontact(){
+	public String getcontact(){
 		return contact;
 	}
 	public String gethotel(){

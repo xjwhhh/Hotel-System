@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class ClientPO implements Serializable{
 	String name;
-	long contact;
+	String contact;
 	int credit;
 	String credit_record;
 	int memberid;
@@ -15,7 +15,7 @@ public class ClientPO implements Serializable{
 	
 	
 	
-	public ClientPO(String n,long c,int c1,String cr,int m,String mt,String b,String co){
+	public ClientPO(String n,String c,int c1,String cr,int m,String mt,String b,String co){
 		name=n;
 		contact=c;
 		credit=c1;
@@ -28,7 +28,7 @@ public class ClientPO implements Serializable{
 	public String getname(){
 		return name;
 	}
-	public long getcontact(){
+	public String getcontact(){
 		return contact;
 	}
 	public int getcredit(){

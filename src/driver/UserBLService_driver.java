@@ -4,7 +4,7 @@ import businesslogicsevice.ResultMessage;
 import businesslogicsevice.UserBLService;
 
 public class UserBLService_driver {
-	public void driver(UserBLService userBLService){
+	public void drive(UserBLService userBLService){
 		
 		//µÇÂ¼
 		ResultMessage result_login=userBLService.login(1, "123456");

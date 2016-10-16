@@ -50,7 +50,7 @@ public class ManageBLService_driver {
 		
 
 		//测试manage_addHotelWorker
-		resultMessage = manageBLService.manage_addHotelWorker("格林豪泰", new HotelWorkerVO("lucy", 1, "格林豪泰"));
+		resultMessage = manageBLService.manage_addHotelWorker("格林豪泰", new HotelWorkerVO("lucy", "11111111111", "格林豪泰"));
 		if(resultMessage==ResultMessage.Success)
 			System.out.println("添加酒店工作人员成功");
 		else
@@ -76,7 +76,7 @@ public class ManageBLService_driver {
 		
 
 		//测试manage_addMarketWorker
-		resultMessage = manageBLService.manage_addMarketWorker(new WebMarketVO("jack", 1));
+		resultMessage = manageBLService.manage_addMarketWorker(new WebMarketVO("jack", "11111111111"));
 		if(resultMessage==ResultMessage.Success)
 			System.out.println("添加网络营销人员成功");
 		else
@@ -92,7 +92,7 @@ public class ManageBLService_driver {
 		
 
 		//测试manage_updateMarketWorker
-		resultMessage = manageBLService.manage_web_updateMarketWorker(new WebMarketVO("tom", 2));
+		resultMessage = manageBLService.manage_web_updateMarketWorker(new WebMarketVO("tom", "11111111111"));
 		if(resultMessage==ResultMessage.Success)
 			System.out.println("更新网络营销人员信息成功");
 		else

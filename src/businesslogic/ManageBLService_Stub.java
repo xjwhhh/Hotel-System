@@ -20,16 +20,16 @@ public class ManageBLService_Stub implements ManageBLService {
 	
 	//酒店工作人员的信息参数
 	String hotelWorker_name;
-	int hotelWorker_contact;
+	String hotelWorker_contact;
 	String hotelWorker_hotel;
 	
 	//网站营销人员信息参数
 	String MarketWorker_name;
-	int MarketWorker_contact;
+	String MarketWorker_contact;
 	
 	public ManageBLService_Stub(String cn,String ccontact,int ccredit,String cr,int m_id,
-			String m_lev,String cb,String ccompany,String hwn,int hwccontact,String hwh,
-			String mwn,int mwccontact){
+			String m_lev,String cb,String ccompany,String hwn,String hwccontact,String hwh,
+			String mwn,String mwccontact){
 		client_name = cn;
 		client_contact = ccontact;
 		client_credit = ccredit;
