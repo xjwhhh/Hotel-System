@@ -22,9 +22,7 @@ public class ClientVO {
 		company=co;
 	}
 	public String getname(){
-		System.out.println(" dnejfejknf ");
 		return name;
-		
 	}
 	public String getcontact(){
 		return contact;
