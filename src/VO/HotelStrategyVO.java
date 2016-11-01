@@ -19,7 +19,6 @@ public class HotelStrategyVO {
 		superposition=iss;
 	}
 	public String getname(){
-		name="chnvk";
 		return name;
 	}
 	public String getcondition(){
