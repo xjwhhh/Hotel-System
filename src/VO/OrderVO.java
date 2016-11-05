@@ -1,11 +1,11 @@
 package VO;
 
-
+import businesslogicsevice.OrderState;
 
 public class OrderVO  {
 	int id;
-	String state;
-	boolean execute;
+	OrderState state;
+	boolean execute=false;
 	String hotel;
 	String start_time;
 	String end_time;
@@ -16,7 +16,7 @@ public class OrderVO  {
 	int price;
 	int expect_number_of_people;
 	
-	public OrderVO(int i,String s,boolean e,String h,String st,String et,String lt,String rt,int rm,String str,int p,int en){
+	public OrderVO(int i,OrderState s,boolean e,String h,String st,String et,String lt,String rt,int rm,String str,int p,int en){
 		id=i;
 		state=s;
 		execute=e;
@@ -33,7 +33,7 @@ public class OrderVO  {
 	public int getid(){
 		return id;
 	}
-	public String getstate(){
+	public OrderState getstate(){
 		return state;
 	}
 	public boolean getexecute(){
@@ -67,3 +67,4 @@ public class OrderVO  {
 		return expect_number_of_people;
 	}
 }
+

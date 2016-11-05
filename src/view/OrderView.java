@@ -6,17 +6,18 @@ import VO.ClientVO;
 import VO.OrderVO;
 import businesslogic.OrderBLService_Stub;
 import businesslogicsevice.OrderBLService;
+import businesslogicsevice.OrderState;
 import businesslogicsevice.ResultMessage;
 
 public class OrderView {
 	public OrderView(){
 		
-		OrderBLService orderBL = new OrderBLService_Stub(10,"已执行",true,"汉庭","10-16","10-19",
+		OrderBLService orderBL = new OrderBLService_Stub(10,OrderState.Noraml,true,"汉庭","10-16","10-19",
 				"10-17","大型房",5,"九折",810,2);
 		
 		//客户查看订单
 				ArrayList<OrderVO> OrderList_Client=new ArrayList<OrderVO>();
-				OrderList_Client=orderBL.order_client_browse();
+				OrderList_Client=orderBL.order_client_browse(1);
 				OrderVO order=OrderList_Client.get(0);
 				System.out.println(order.getid());
 				System.out.println(order.getstate());
@@ -33,7 +34,7 @@ public class OrderView {
 				
 				//酒店工作人员查看订单
 				ArrayList<OrderVO> OrderList_Hotel=new ArrayList<OrderVO>();
-				OrderList_Hotel=orderBL.order_hotel_browse();
+				OrderList_Hotel=orderBL.order_hotel_browse(1);
 				OrderVO hotel=OrderList_Hotel.get(0);
 				System.out.println(hotel.getid());
 				System.out.println(hotel.getstate());
@@ -49,7 +50,7 @@ public class OrderView {
 				System.out.println(hotel.getexpect_number_of_people());
 				
 				//客户撤销订单
-				ResultMessage result_client=orderBL.order_client_cancel();
+				ResultMessage result_client=orderBL.order_client_cancel(1);
 				if(result_client==ResultMessage.Success){
 					System.out.println("撤销成功");
 				}
@@ -58,7 +59,8 @@ public class OrderView {
 				}
 				
 				//客户生成订单
-				OrderVO order1=orderBL.order_client_generate("input");
+				OrderVO neworder=new OrderVO(1,OrderState.Noraml, false, "汉庭","10-16","10-19","10-17", "大床房",200,"九折", 1, 1);
+				OrderVO order1=orderBL.order_client_generate(neworder);
 				System.out.println(order1.getid());
 				System.out.println(order1.getstate());
 				System.out.println(order1.getexecute());
@@ -74,7 +76,7 @@ public class OrderView {
 				
 				//酒店工作人员执行订单
 				ClientVO c=new ClientVO("Jack","11111111111",0,"无",000001,"个人会员","1997-1-1","无");
-				ResultMessage result_hotel=orderBL.order_hotel_execute(c);
+				ResultMessage result_hotel=orderBL.order_hotel_execute(1);
 				if(result_hotel==ResultMessage.Success){
 					System.out.println("执行订单成功");
 				}
